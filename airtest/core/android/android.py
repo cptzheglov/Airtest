@@ -23,10 +23,10 @@ class Android(Device):
     """Android Device Class"""
 
     def __init__(self, serialno=None, host=None,
-                 cap_method=CAP_METHOD.MINICAP_STREAM,
-                 touch_method=TOUCH_METHOD.MINITOUCH,
-                 ime_method=IME_METHOD.YOSEMITEIME,
-                 ori_method=ORI_METHOD.MINICAP,
+                 cap_method=CAP_METHOD.ADBCAP,
+                 touch_method=TOUCH_METHOD.ADBTOUCH,
+                 ime_method=IME_METHOD.ADBIME,
+                 ori_method=ORI_METHOD.ADB,
                  ):
         super(Android, self).__init__()
         self.serialno = serialno or self.get_default_device()
